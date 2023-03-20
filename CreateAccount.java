@@ -3,6 +3,11 @@ public class CreateAccount {
   public static void main(String[] args) {
 
     Account firstAccount = new Account();
+    firstAccount.holder = new Holder();
+
+    firstAccount.holder.nome = "Caio César";
+    System.out.println(firstAccount.holder.nome);
+
     Account secondAccount = new Account();
 
     firstAccount.deposit(1000);

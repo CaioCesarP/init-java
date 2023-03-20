@@ -2,7 +2,7 @@ public class Account {
   double balance;
   int agency;
   int accountNumber;
-  String holder;
+  Holder holder;
 
   /**
    * @param Amount
