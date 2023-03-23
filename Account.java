@@ -1,8 +1,20 @@
 public class Account {
-  double balance;
-  int agency;
-  int accountNumber;
-  Holder holder;
+  private static int NumberOfAccounts;
+  private double balance;
+  private int agency;
+  private int accountNumber;
+  private Holder holder;
+
+  public static int getNumberOfAccounts() {
+    return Account.NumberOfAccounts;
+  }
+
+  public Account(int Agency, int AccountNumber) {
+    Account.NumberOfAccounts++;
+    this.agency = Agency;
+    this.accountNumber = AccountNumber;
+    System.out.println("Conta criada com a conta de número " + AccountNumber);
+  }
 
   /**
    * @param Amount
@@ -77,6 +89,42 @@ public class Account {
     Account.deposit(Amount);
     System.out.println("Amount transfer successfully.");
     return true;
+  }
+
+  /**
+   * @return double
+   */
+  public double getBalance() {
+    return this.balance;
+  }
+
+  /**
+   * @return double
+   */
+  public double getAgency() {
+    return this.agency;
+  }
+
+  /**
+   * @return double
+   */
+  public double getAccontNumer() {
+    return this.accountNumber;
+  }
+
+  /**
+   * @param Holder
+   * @return void
+   */
+  public void setHolder(Holder Holder) {
+    this.holder = Holder;
+  }
+
+  /**
+   * @return Holder
+   */
+  public Holder getHolder() {
+    return this.holder;
   }
 
 }
